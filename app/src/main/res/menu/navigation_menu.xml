@@ -1,0 +1,91 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/all_categories"
+            android:title="Change Password"
+            android:icon="@drawable/category"/>
+
+
+        <item
+            android:visible="false"
+            android:id="@+id/cart"
+            android:title="My Cart"
+            android:icon="@drawable/cart"/>
+
+        <item android:title="My Account"
+            android:icon="@drawable/user">
+            <menu>
+                <item
+                    android:id="@+id/orders"
+                    android:title="My Orders"
+                    android:icon="@drawable/order"/>
+
+                <item
+                    android:id="@+id/Rate"
+                    android:title="Rate Us"
+                    android:icon="@drawable/rate" />
+                <item
+                    android:id="@+id/MyWishlist"
+                    android:title="Wishlist"
+                    android:icon="@drawable/wishlist"/>
+
+                <item
+                    android:id="@+id/MyCards"
+                    android:title="My Cards &amp; Wallet"
+                    android:icon="@drawable/cart"/>
+                <item
+                    android:visible="false"
+                    android:id="@+id/MyAddress"
+                    android:title="Notification"
+                    android:icon="@drawable/logout"/>
+                <item
+                    android:id="@+id/offer"
+                    android:title="Offer"
+                    android:icon="@drawable/local_offer"/>
+
+
+
+            </menu>
+        </item>
+
+
+
+        <item
+            android:visible="false"
+            android:id="@+id/notifications"
+            android:title="My Notifications"
+            android:icon="@drawable/notifications"/>
+
+        <item
+            android:id="@+id/privacy_policy"
+            android:title="Privacy Policy"
+            />
+
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+
+            <item
+                android:visible="false"
+                android:id="@+id/rate"
+                android:title="Rate Us"
+                android:icon="@drawable/rate" />
+            <item
+                android:id="@+id/share"
+                android:title="Share"
+                android:icon="@drawable/share"/>
+
+            <item
+                android:id="@+id/logout"
+                android:title="Logout"
+                android:icon="@drawable/logout"/>
+
+        </menu>
+    </item>
+
+</menu>

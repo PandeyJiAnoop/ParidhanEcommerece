@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_height="match_parent"
+    android:background="@color/lightgreen"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_detail"
+            >
+            <RelativeLayout
+                android:id="@+id/rlHeader"
+                android:background="@color/purple_500"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:layout_toRightOf="@+id/ivBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="@string/carlist"/>
+
+            </RelativeLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_below="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_checkout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_cart_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentPadding="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Order Summary"
+                                android:textAllCaps="true"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="15dp"
+                                android:padding="5dp"
+                                android:fontFamily="@font/gfs_didot"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="5dp">
+                                <RelativeLayout
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sub Total"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="14dp"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\u20b9 2209"
+                                        android:id="@+id/tv_sub_total"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="14dp"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Taxes"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="14dp"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\u20b9 117"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="14dp"
+                                        android:id="@+id/tv_taxes"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Shipping"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="14dp"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\u20b9 117"
+                                        android:id="@+id/tv_shipping"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="14dp"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Shipping Charges"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\u20b9 0.0"
+                                        android:textStyle="bold"
+                                        android:id="@+id/tvShippinCharj"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="15dp"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="GST Price"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\u20b9 0.0"
+                                        android:textStyle="bold"
+                                        android:id="@+id/tvgst"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="15dp"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Payable"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="\u20b9 0.0"
+                                        android:textStyle="bold"
+                                        android:id="@+id/tv_grand_total"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="15dp"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/gfs_didot"
+                                        android:textColor="@color/black_transparent"/>
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Proceed To Checkout"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_background"
+                android:textStyle="bold"
+                android:id="@+id/btn_checkout"
+                android:textAllCaps="false"
+
+                android:textSize="15dp"
+                android:fontFamily="@font/gfs_didot"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/empty_ll"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/cart"
+                app:tint="@color/purple_500" />
+            <TextView
+                android:id="@+id/empty_wish_list_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/gfs_didot"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:text="@string/empty_cart_heading" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to shopping"
+                android:id="@+id/btn_shop_now"
+                android:fontFamily="@font/gfs_didot"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/button_background"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

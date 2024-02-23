@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.code.paridhan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Paridhan"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".SubCategoryListAKP" />
+        <activity
+            android:name=".order.OfferActivity"
+            android:exported="false" />
+        <activity
+            android:name=".basic.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".basic.WishlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".basic.ZiimActivity"
+            android:exported="false" />
+        <activity android:name=".basic.SerachActivity" />
+        <activity
+            android:name=".basic.NotificationList"
+            android:exported="true" />
+        <activity
+            android:name=".basic.ChangePasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".order.OnlinePaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".order.OrderDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.CustomerProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.SuCategoryListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".order.OrderSummary"
+            android:exported="true" />
+        <activity
+            android:name=".Address.AddNewAddressActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Address.ShippingAddresslist"
+            android:exported="true" />
+        <activity
+            android:name=".order.OrderListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.CartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.NotificationListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.ProductListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.SignUp"
+            android:exported="true" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.ProductDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".basic.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#03A55D</color>
+    <color name="purple_500">#03A55D</color>
+    <color name="purple_700">#03A55D</color>
+    <color name="teal_200">#03A55D</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#03B80A</color>
+    <color name="green2">#00B75F</color>
+    <color name="grey">#4D556A</color>
+    <color name="purple">#03A55D</color>
+    <color name="lightgreen">#C9FDE6</color>
+    <color name="text_black_color">#2B2A29</color>
+    <color name="text_view_all_color">#BD9775</color>
+    <color name="colorPrimary_background">#EAF5F5</color>
+    <color name="black_transparent">#AA000000</color>
+    <color name="black_transparent_50">#80000000</color>
+    <color name="black_transparent_80">#CC000000</color>
+    <color name="black_transparent_70">#B3000000</color>
+    <color name="dark_grey">#808080</color>
+    <color name="colorTex">#585858</color>
+    <color name="colorSub">#b0afaf</color>
+    <color name="hintColor">#757575</color>
+    <color name="blue">#1C33B3</color>
+    <color name="red">#F51302</color>
+    <color name="failure">#d30915</color>
+    <color name="transparent">#8e030303</color>
+    <color name="orange">#EA3056</color>
+    <color name="Parrotgreen">#F8708C</color>
+    <color name="lightgrey">#f2f2f2</color>
+    <color name="recyclerviewBackground">#d6d6d6</color>
+</resources>
